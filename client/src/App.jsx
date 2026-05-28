@@ -1,11 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import EmployeeDashboard from "./pages/EmployeeDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+
 function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-black">
-      <h1 className="text-5xl font-bold text-green-400">
-        Tailwind Working 🚀
-      </h1>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+      <Route path="/admin-dashboard" element={<AdminDashboard />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
